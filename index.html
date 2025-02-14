@@ -51,6 +51,8 @@
             margin-top: 20px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
+            position: relative;
+            z-index: 5; /* Coloca el GIF por debajo de los corazones */
         }
         .show {
             display: block;
@@ -71,7 +73,8 @@
             color: rgba(255, 255, 255, 0.8);
             font-size: 20px;
             animation: floatHearts 4s linear infinite;
-            z-index: 1;
+            z-index: 15; /* Los corazones pasan por encima del GIF */
+            pointer-events: none;
         }
     </style>
 </head>
@@ -80,7 +83,7 @@
         <h1>¡Feliz Día! 💖</h1>
         <button id="showButton" onclick="showGif()">Ver</button>
         <div class="flower-gif" aria-live="polite">
-            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHYxNGF3emkxZDM3YmViZTg3NW9mZnV0Nzdsdml0bDBobjdhcXI3MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Sy1m3x6DiJzOzeTDan/giphy.gif">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmI4b2UwZnR4NzdpdW94cDJvZmx1MnY4NjdhZmJkZmQwZmt0ZHp1OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Sy1m3x6DiJzOzeTDan/giphy.gif">
         </div>
     </div>
 
